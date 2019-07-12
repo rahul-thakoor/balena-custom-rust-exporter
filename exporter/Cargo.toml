@@ -1,0 +1,10 @@
+[package]
+name = "rust_prometheus_exporter"
+version = "0.1.0"
+authors = ["rahul-thakoor <rahul.thakoor@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+prometheus_exporter_base = "0.4.0"
+futures = "0.1.28"
+rust_gpiozero= "0.2.0"

@@ -1,0 +1,25 @@
+version: "2"
+volumes:
+  balena-data:
+services:
+  exporter:
+    build: ./exporter
+    ports:
+      - "32221:32221"
+    privileged: true
+
+  prometheus:
+    build: ./prometheus
+    network_mode: "host"
+    ports:
+      - "9090:9090"
+    volumes:
+      - "balena-data:/data"
+
+  grafana:
+    restart: always
+    build: ./grafana
+    ports:
+      - "80:3000"
+    volumes:
+      - "balena-data:/data"

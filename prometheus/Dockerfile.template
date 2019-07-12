@@ -1,0 +1,13 @@
+FROM balenalib/%%BALENA_MACHINE_NAME%%-debian
+
+ARG ARC='armv6'
+
+RUN curl -SL https://github.com/prometheus/prometheus/releases/download/v2.11.1/prometheus-2.11.1.linux-${ARC}.tar.gz --output prometheus.tar.gz \
+    && tar xvfz prometheus.tar.gz \
+    && rm -rf prometheus.tar.gz
+
+WORKDIR /app
+ADD . /app/
+RUN mv /prometheus-2.11.1.linux-${ARC}/prometheus /app/
+
+CMD ["/app/entry.sh"]

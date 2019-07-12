@@ -1,0 +1,14 @@
+**/target/
+**/*.rs.bk
+**/.DS_Store
+Dockerfile
+.resin-sync.yml
+**/.idea/
+
+
+#Added by cargo
+#
+#already existing elements are commented out
+
+/target
+#**/*.rs.bk
