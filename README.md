@@ -4,7 +4,7 @@
 
 Monitoring your balena-powered applications, services or even hardware is crucial for proper management. Prometheus is an open-source monitoring tool that allows gathering data from numerous services through exporters.
 
-However, sometimes you may find yourself in a situation where you need a custom exporter for your use case. Rust, which is becoming an increasingly popular programming language and [loved](https://insights.stackoverflow.com/survey/2019#most-loved-dreaded-and-wanted) by most developers is ideal for writing custom exporter. The exporter can be compiled as a single binary and the helper library, [`prometheus_exporter_base`](https://github.com/MindFlavor/prometheus_exporter_base), makes it very easy.
+However, sometimes you may find yourself in a situation where you need a custom exporter for your use case. Rust, which is becoming an increasingly popular programming language and [loved](https://insights.stackoverflow.com/survey/2019#most-loved-dreaded-and-wanted) by most developers is ideal for writing custom exporters. The exporter can be compiled as a single binary and the helper library, [`prometheus_exporter_base`](https://github.com/MindFlavor/prometheus_exporter_base), makes it very easy.
 
 This project provisions a custom exporter written in Rust along with Prometheus and [Grafana](https://grafana.com/) for visualising our gathered metrics. For demo purposes, all of the services run on a Raspberry Pi. Ideally, you would deploy Prometheus and Grafana directly in the cloud and point the exporter to the Prometheus instance.
 

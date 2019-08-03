@@ -4,7 +4,6 @@
 
 FROM balenalib/%%BALENA_MACHINE_NAME%%-debian as base
 
-ENV INITSYSTEM=on
 ENV DEBIAN_FRONTEND=noninteractive
 
 ################################################################################
@@ -47,7 +46,7 @@ RUN cargo build --release
 #
 # RUN rm -rf target/release/foo-bar target/release/deps/foo_bar-*
 #                              ^                           ^
-RUN rm -rf target/release/hello* target/release/deps/rust_prometheus_exporter-*
+RUN rm -rf target/release/rust_prometheus_exporter* target/release/deps/rust_prometheus_exporter-*
 
 ################################################################################
 # Builder
